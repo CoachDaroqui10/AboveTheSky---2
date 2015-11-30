@@ -30,6 +30,14 @@ bool MainMenuScene::init()
     
     Size visibleSize = Director::getInstance()->getVisibleSize();
 
+	Label *_etiqueta;
+
+	__String *text = __String::create("ABOVE THE SKY");
+	_etiqueta = Label::createWithTTF(text->getCString(), "fonts/MArker Felt.ttf", 24);
+
+	_etiqueta->setPosition(Vec2(visibleSize.width / 2, 3*(visibleSize.height) / 4));
+	addChild(_etiqueta, 0);
+
 	//Button
 
 	auto button = MenuItemImage::create("CloseNormal.png",
